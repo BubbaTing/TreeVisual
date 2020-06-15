@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tree-app"
+    }
+  },
+  "defaultProject": "tree-app",
+  "cli": {
+    "analytics": false
+  }
 }
