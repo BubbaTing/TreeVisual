@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
+  userValue: number;
+  @Input() lists = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addValue() {
+    this.lists.push(this.userValue);
   }
 
 }
