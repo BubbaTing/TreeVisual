@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TreeSpaceComponent implements OnInit {
 
+  lists = [];
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  insertUserValue(value:number){
+    this.lists.push(value);
   }
 
 }
