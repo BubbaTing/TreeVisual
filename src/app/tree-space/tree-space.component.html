@@ -3,5 +3,6 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi fuga pariatur veritatis laboriosam deserunt, voluptatum ipsam obcaecati consequuntur quidem, nulla, adipisci magnam. Aut, aliquid soluta repellat in quia eum?</p>
         <div *ngFor="let i of lists">{{i}}</div>
     </div>
-    <app-user (addUserInput)='insertUserValue($event)'></app-user>
+    <app-user (userSubmit)='insertUserValue($event)'></app-user>
+    <!-- To talk between 2 different components, the connection is the varible of the @Output -->
 </div>

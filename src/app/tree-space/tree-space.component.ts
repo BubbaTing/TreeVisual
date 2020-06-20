@@ -15,6 +15,7 @@ export class TreeSpaceComponent implements OnInit {
 
   insertUserValue(value:number){
     this.lists.push(value);
+    // console.log(value);
   }
 
 }

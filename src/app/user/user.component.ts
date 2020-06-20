@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class UserComponent implements OnInit {
 
   userValue: number;
+  reset: number;
   @Output() userSubmit = new EventEmitter();
 
   constructor() { }
@@ -17,6 +18,8 @@ export class UserComponent implements OnInit {
 
   addUserInput() {
     this.userSubmit.emit(this.userValue);
+    this.userValue = this.reset;
+    // console.log("User values is ", this.userValue);
   }
 
 }
