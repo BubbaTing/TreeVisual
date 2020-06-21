@@ -7,9 +7,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  userValue: number;
+  userAddingValue: number;
   reset: number;
+  userDeletingValue: number;
+  report: string;
   @Output() userSubmit = new EventEmitter();
+  @Output() userRequest = new EventEmitter();
 
   constructor() { }
 
@@ -17,9 +20,19 @@ export class UserComponent implements OnInit {
   }
 
   addUserInput() {
-    this.userSubmit.emit(this.userValue);
-    this.userValue = this.reset;
+    this.userSubmit.emit(this.userAddingValue);
+    this.userAddingValue = this.reset;
     // console.log("User values is ", this.userValue);
+  }
+
+  removeUserInput() {
+    this.userRequest.emit(this.userDeletingValue);
+    this.userDeletingValue = this.reset;
+  }
+
+  displayMessage(report:string){
+    this.report = report;
+    // fix displaying messages
   }
 
 }

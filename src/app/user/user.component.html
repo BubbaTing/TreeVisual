@@ -1,7 +1,13 @@
 <form>
     <div class="form-group">
       <label>Enter a value</label>
-      <input type="text" class="form-control" name="userInput" [(ngModel)]="userValue">
+      <input type="text" class="form-control" name="Insertion" [(ngModel)]="userAddingValue">
     </div>
-    <button type="submit" class="btn btn-primary" (click)="addUserInput()">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="addUserInput()">Insert</button>
+    <div class="form-group">
+      <label>Enter a value</label>
+      <input type="text" class="form-control" name="Deletion" [(ngModel)]="userDeletingValue">
+      <small (message) = 'displayMessage($event)'>{{report}}</small>
+    </div>
+    <button type="submit" class="btn btn-danger" (click)="removeUserInput()">Remove</button>
 </form>
