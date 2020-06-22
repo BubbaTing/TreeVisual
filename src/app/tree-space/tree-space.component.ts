@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-tree-space',
@@ -8,8 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class TreeSpaceComponent implements OnInit {
 
   lists = [];
-  @Output() messages =  new EventEmitter();
-
+  messages:string;
 
   constructor() { }
 
@@ -24,10 +23,10 @@ export class TreeSpaceComponent implements OnInit {
   removeUserValue(removeValue:number){
     const result = this.lists.indexOf(removeValue);
     if( result < 0){
-      this.messages.emit("Error: Cannot find this value!")
+      this.messages = "Error: Cannot find this value!";
     } else {
       this.lists.splice(result, 1);
-      this.messages.emit("Value is removed")
+      this.messages = "Value is removed";
     }
       
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -10,7 +10,7 @@ export class UserComponent implements OnInit {
   userAddingValue: number;
   reset: number;
   userDeletingValue: number;
-  report: string;
+  @Input() report: string = "place holder";
   @Output() userSubmit = new EventEmitter();
   @Output() userRequest = new EventEmitter();
 
@@ -30,9 +30,9 @@ export class UserComponent implements OnInit {
     this.userDeletingValue = this.reset;
   }
 
-  displayMessage(report:string){
-    this.report = report;
-    // fix displaying messages
-  }
+  // displayMessage(errorMessage:string){
+  //   this.report = errorMessage;
+  //   // fix displaying messages
+  // }
 
 }
