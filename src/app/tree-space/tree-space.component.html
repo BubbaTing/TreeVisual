@@ -3,7 +3,10 @@
     <div class="row">
         <div class="col justify-content-center">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sequi fuga pariatur veritatis laboriosam deserunt, voluptatum ipsam obcaecati consequuntur quidem, nulla, adipisci magnam. Aut, aliquid soluta repellat in quia eum?</p>
-            <div *ngFor="let i of lists">{{i}}   </div>
+            <div *ngFor="let i of lists">
+                <div class="nodes">{{i}}</div>    
+                <br>
+            </div>
         </div>
         <div class="col">
             <app-user [report]="messages" (userSubmit)='insertUserValue($event)'  (userRequest)='removeUserValue($event)' ></app-user>
